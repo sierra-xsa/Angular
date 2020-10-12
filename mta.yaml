@@ -1,0 +1,43 @@
+ID: Angular
+_schema-version: "2.1"
+version: 0.0.1
+modules:
+  - name: Angular-db
+    type: hdb
+    path: db
+    parameters:
+      memory: 256M
+      disk-quota: 256M
+    requires:
+      - name: Angular-db-hdi-container
+  - name: Angular-srv
+    type: nodejs
+    path: srv
+    parameters:
+      memory: 512M
+      disk-quota: 256M
+    provides:
+      - name: srv_api
+        properties:
+          url: ${default-url}
+    requires:
+      - name: Angular-db-hdi-container
+
+  - name: web
+    type: html5
+    path: web
+
+
+  - name: AngularMod
+    type: nodejs
+    path: AngularMod
+    provides:
+     - name: AngularMod_api
+       properties:
+          url: ${default-url}
+
+resources:
+  - name: Angular-db-hdi-container
+    type: com.sap.xs.hdi-container
+    properties:
+      hdi-container-name: ${service-name}
