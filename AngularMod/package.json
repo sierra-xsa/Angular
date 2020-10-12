@@ -2,7 +2,7 @@
   "name": "angular-mod",
   "version": "1.0.0",
 "engines": {
-    "node": "10.x"
+    "node": "^8.9"
   },
   "scripts": {
     "ng": "ng",
@@ -28,7 +28,8 @@
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2",
  "@sap/xsenv": "^2.0.0",
-    "@sap/xsjs": "^5.2.0"
+    "@sap/xsjs": "^5.2.0",
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1001.1",
