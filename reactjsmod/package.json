@@ -1,20 +1,43 @@
 {
-  "dependencies": {},
-  "description": "my description",
-  "devDependencies": {
-    "jest": "^23.6.0",
+  "name": "reactjsmod",
+  "version": "0.1.0",
+  "private": true,
+ "engines": {
+    "node": "10.0"
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "cra-template": "1.0.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.3",
+ "jest": "^23.6.0",
     "jest-junit": "^5.2.0"
   },
-  "files": [],
-  "main": "server.js",
-  "name": "reactjsmod",
   "scripts": {
-    "test": "node node_modules/jest/bin/jest --config jest.json",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+"test-node": "node node_modules/jest/bin/jest --config jest.json",
     "test-coverage": "node node_modules/jest/bin/jest --coverage --config jest.json",
-    "start": "node server.js"
+    "start-node": "node server.js"
   },
-  "engines": {
-    "node": "10.x"
+  "eslintConfig": {
+    "extends": "react-app"
   },
-  "version": "1.0.0"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
