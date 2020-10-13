@@ -36,6 +36,15 @@ modules:
        properties:
           url: ${default-url}
 
+
+  - name: reactjsmod
+    type: nodejs
+    path: reactjsmod
+    provides:
+     - name: reactjsmod_api
+       properties:
+          url: ${default-url}
+
 resources:
   - name: Angular-db-hdi-container
     type: com.sap.xs.hdi-container
